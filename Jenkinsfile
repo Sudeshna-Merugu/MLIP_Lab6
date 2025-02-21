@@ -15,11 +15,11 @@ pipeline {
                 bat '''
                 echo "Test Step: Running pytest"
                 
-                :: Initialize conda for batch
-                call conda init cmd.exe
+                :: Initialize conda with full path
+                call C:\\Users\\naras\\anaconda3\\condabin\\conda.bat init cmd.exe
                 
-                :: Run pytest in our conda environment
-                call conda run -n mlip pytest
+                :: Run pytest in our conda environment with full path
+                call C:\\Users\\naras\\anaconda3\\condabin\\conda.bat run -n mlip pytest
                 '''
             }
         }
